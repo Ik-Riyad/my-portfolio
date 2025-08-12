@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router";
-import { FaBars } from "react-icons/fa"; // Hamburger icon
+import { FaBars, FaDownload } from "react-icons/fa"; // Hamburger icon
 import { IoMdClose } from "react-icons/io"; // Close icon
 
 const Navbar = () => {
@@ -78,6 +78,15 @@ const Navbar = () => {
                         Contact Us
                         <span className="absolute left-0 -bottom-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </NavLink>
+                </li>
+                <li>
+                    <a
+                        href="/path/to/your-cv.pdf"
+                        download="Ibrahim_Khan_Riyadh_CV.pdf"
+                        className="flex items-center justify-center gap-2 py-3 px-6 bg-secondary text-white font-medium shadow hover:bg-primary transition duration-300"
+                    >
+                        DOWNLOAD CV <FaDownload />
+                    </a>
                 </li>
             </ul>
         </nav>

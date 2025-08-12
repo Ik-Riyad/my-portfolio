@@ -6,6 +6,8 @@ import Education from '../components/Education';
 import Experience from '../components/Experience';
 import MyRecentWorks from '../components/MyRecentWorks';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const MainLayout = () => {
     const [text] = useTypewriter({
@@ -13,10 +15,10 @@ const MainLayout = () => {
         loop: 0
     })
     return (
-        <div className="h-full py-5 lg:py-15">
+        <div className=" pt-5 lg:pt-15">
             <section className="flex flex-col md:flex-row-reverse lg:flex-row-reverse justify-center items-center px-4 md:px-8 lg:px-0">
                 {/* Navbar - full width on small, normal on large */}
-                <div id='/' className="w-full md:w-auto flex justify-end md:justify-start lg:fixed lg:right-110 lg:top-50">
+                <div id='/' className="w-full md:w-auto flex justify-end md:justify-start lg:fixed lg:right-90 lg:top-50">
                     <Navbar />
                 </div>
 
@@ -70,6 +72,13 @@ const MainLayout = () => {
                 <h1 className='text-secondary text-6xl lg:text-8xl font-extrabold text-center pb-10 lg:pb-20 lg:pr-50'>Recent Works</h1>
                 <MyRecentWorks></MyRecentWorks>
             </section>
+            {/* Contact Section */}
+            <section className='mt-40'>
+                <h1 className='text-secondary text-6xl lg:text-8xl font-extrabold text-center pb-10 lg:pb-20 lg:pr-50'>Get in Touch</h1>
+                <Contact></Contact>
+            </section>
+            {/* Footer section */}
+            <Footer></Footer>
         </div>
 
     );
