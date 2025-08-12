@@ -72,7 +72,7 @@ export default function MyRecentWorks() {
     ];
 
     return (
-        <div className="max-w-screen-lg ml-[340px] px-42 p-6 space-y-6">
+        <div className="max-w-screen-lg mx-auto lg:ml-[340px] px-6 lg:px-42 p-6 space-y-6">
             {projects.map((project, index) => (
                 <div key={index} className="bg-secondary p-4 rounded-lg text-white">
                     <img
